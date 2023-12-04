@@ -317,7 +317,6 @@ header {
 }
 
 .wrapper .remember-forgot {
-  display: flex;
   justify-content: space-between;
   font-size: 14.5px;
   margin: -15px 0 15px;
@@ -328,8 +327,8 @@ header {
   margin-right: 3px;
 }
 
-.remember-forgot a {
-  color: $accent-color;
+.remember-forgot a:hover {
+  color: red;
 }
 
 .register-link p a:hover, .remember-forgot a:hover {
