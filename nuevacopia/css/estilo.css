@@ -1,127 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #000;
-  overflow: hidden;
-}
-
-.login-box {
-  position: relative;
-  width: 400px;
-  height: 450px;
-  background: rgba(250, 250, 250, 0.168627451);
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h2 {
-  font-size: 2em;
-  color: #fff;
-  text-align: center;
-  transition: 0.5s ease;
-}
-
-.input-box {
-  position: relative;
-  width: 310px;
-  margin: 30px 0;
-  border-bottom: 2px solid #fff;
-}
-.input-box label {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  font-size: 1em;
-  pointer-events: none;
-  color: #fff;
-}
-.input-box input {
-  width: 100%;
-  height: 50px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  color: #fff;
-  padding: 0 35px 0 5px;
-  transition: 0.5s ease;
-}
-.input-box input:focus ~ label, .input-box input:valid ~ label {
-  top: -5px;
-}
-.input-box .icon {
-  position: absolute;
-  right: 8px;
-  color: #fff;
-  font-size: 1.2em;
-  line-height: 57px;
-  /* transition: .5s ease; */
-}
-
-.remember-forgot {
-  color: #fff;
-  font-size: 0.9em;
-  margin: -15px 0 15px;
-  justify-content: space-between;
-  transition: 0.5s ease;
-}
-.remember-forgot label input {
-  accent-color: #fff;
-  margin-right: 3px;
-  /* transition: .5s ease; */
-}
-.remember-forgot a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.5s ease;
-}
-.remember-forgot a:hover {
-  text-decoration: underline;
-}
-
-button {
-  width: 100%;
-  height: 40px;
-  background: #fff;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 1em;
-  color: #191919;
-  font-weight: 500;
-  /* transition: .5s ease; */
-}
-
-.register-link {
-  color: #fff;
-  font-size: 0.9em;
-  text-align: center;
-  margin: 25px 0 10px;
-  /* transition: .5s ease; */
-}
-.register-link p a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.5s ease;
-}
-.register-link p a:hover {
-  text-decoration: underline;
-}
-
 .Boton, .escuderias, header {
   display: flex;
 }
@@ -224,19 +100,6 @@ label {
   color: #080808;
 }
 
-.centerChilds {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.backgroundImage {
-  background-image: url(../img/ferrarin1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 input [type=text], textarea {
   display: block;
   width: 100%;
@@ -285,8 +148,8 @@ input [type=text], textarea {
 }
 
 .contenedorCursos {
-  display: block;
-  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
@@ -354,10 +217,29 @@ header {
   flex-direction: column;
 }
 
+.centerChilds {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundImage {
+  background-image: url(../img/ferrarin1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 1023px) {
+  .wrapper {
+    margin: 20px;
+  }
   .pilotos {
     height: auto;
     flex-direction: column;
+    display: block;
+  }
+  .contenedorCursos {
     display: block;
   }
   img {
@@ -391,9 +273,10 @@ header {
 
 .wrapper {
   width: 420px;
+  background-color: rgba(0, 2, 10, 0.5215686275);
   border: 2px solid #eae4e4;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 30px 40px;
@@ -406,8 +289,7 @@ header {
 .wrapper .input-box {
   width: 100%;
   height: 50px;
-  background: #c01414;
-  margin: 30px 0;
+  margin: 18px 0;
   border-radius: 30px;
 }
 
@@ -430,7 +312,7 @@ header {
 }
 
 .inbox-box i {
-  color: green;
+  color: white;
   position: absolute;
   right: 20px;
   top: 50%;
@@ -441,16 +323,16 @@ header {
 .wrapper .remember-forgot {
   justify-content: space-between;
   font-size: 14.5px;
-  margin: -15px 0 15px;
+  margin: 10px 0 15px;
 }
 
 .remember-forgot label input {
-  accent-color: green;
+  accent-color: white;
   margin-right: 3px;
 }
 
-.remember-forgot a:hover {
-  color: red;
+.remember-forgot a {
+  color: white;
 }
 
 .register-link p a:hover, .remember-forgot a:hover {
@@ -460,7 +342,7 @@ header {
 .wrapper .btn {
   width: 100%;
   height: 45px;
-  background: green;
+  background: white;
   border: none;
   outline: 0;
   border-radius: 40px;
@@ -478,6 +360,6 @@ header {
 }
 
 .register-link p a {
-  color: green;
+  color: white;
   font-weight: 600;
 }/*# sourceMappingURL=estilo.css.map */
